@@ -18,21 +18,21 @@ Prototype of a toolkit to generate executable code for distributed embedded cont
 
 ### IOPT-Tools
 
-The IOPT-Tools framework allows the interactive creation of graphical models using IOPT nets. The user creates the Petri net graph and associates external signals and events to its transitions and places. Each event is defined based on the change of a signal value (edge up or edge down). The models can be interactively simulated [11] and its state space generated and verified to detect deadlocks, determine needed memory resources, and identify the occurrence of desirable global states [12]. The nodes can have distinct associated time domains. These models can be automatically split in the corresponding single time domain models from which code is then generated to be run in distinct processors [13], [14], [15]. In this prototype it is possible to run those nets on Arduino boards.
+The [IOPT-Tools] framework allows the interactive creation of graphical models using IOPT nets. The user creates the Petri net graph and associates external signals and events to its transitions and places. Each event is defined based on the change of a signal value (edge up or edge down). The models can be interactively simulated [11] and its state space generated and verified to detect deadlocks, determine needed memory resources, and identify the occurrence of desirable global states [12]. The nodes can have distinct associated time domains. These models can be automatically split in the corresponding single time domain models from which code is then generated to be run in distinct processors [13], [14], [15]. In this prototype it is possible to run those nets on Arduino boards.
 
-For more informations on how to use IOPT-Tools framework please read it's [user manual].
+For more information on how to use IOPT-Tools framework please read it's [user manual].
 
 #### Model Creation
-For proof of concept there were created two models, one with a single time domain (single controller needed) and another with two distinct time domais (two controllers needed).
+For proof of concept there were created two models, one with a single time domain (single controller needed) and another with two distinct time domains (two controllers needed).
 
-With [IOPT Tools] it is possible to open the models present on the [models folder] with the "Upload Model File" feature.
+With IOPT-Tools it is possible to open the models present on the [models folder] with the "Upload Model File" feature.
 Since the user has the model opened the C language code can be generated with a click in "Generate C Code" button, as seen in the following figure.
 
 ![Generate C Code](https://dl.dropboxusercontent.com/u/66156156/i2c%20paper/generate_c_code.png)
 
 This is the example for a single controller model, and the code generated is available [here].
 
-For the N-time domain models an aditional step needs to be done. The user must generate the GALS Models (Globally-Asynchronous Locally-Synchronous) first with the "Decompose GALS" button. The framework will automatically generate N new models as the N is equal to the time domains present in the model.
+For the N-time domain models an additional step needs to be completed. The user must generate the GALS Models (Globally-Asynchronous Locally-Synchronous) first with the "Decompose GALS" button. The framework will automatically generate N new models as the N is equal to the time domains present in the model.
 With two time domains (proof of concept example) it will generate two models as seen in the following figure.
 
 ![GALS Models](https://dl.dropboxusercontent.com/u/66156156/i2c%20paper/gals.png)
@@ -40,8 +40,8 @@ With two time domains (proof of concept example) it will generate two models as 
 In order to obtain the C code the user has to access every GALS Model ad press the "Generate C Code" button.
 This model code is present in [this folder] named as "distributed_GALS_1.zip" and "distribited_GALS_2.zip".
 
-#### Prepare the arduino project
-Please follow this steps to prepare the arduino project:
+#### Prepare the Arduino project
+Please follow this steps to prepare the Arduino project:
 
 ##### Step1
 Unzip the generated C Code file and delete the files `MakeFile`, `http_server.h`, `http_server.c`, `dummy_gpio.c`, `linux_sys_gpio.c`, `raspi_mmap_gpio.c`, `net_dbginfo.c`,  `net_server.h` and `net_server.c`.
@@ -66,7 +66,7 @@ Rename the `net_main.c` file to its parent folder name and change its extension 
  ```
 
 ###### Step3 - Single Controller
- In the single controller scenario the script used is the [IOPT2AC_single.py]. When the script finishes to run it outputs where the arduino's Digital Ports should be connected.
+ In the single controller scenario the script used is the [IOPT2AC_single.py]. When the script finishes to run it outputs where the Arduino's Digital Ports should be connected.
  ```sh
  Inputs
 Digital 2 -> net1
@@ -86,7 +86,7 @@ Output Events:
 
 ###### Step3 - Distributed Controllers
 In the single controller scenario the script used is the [IOPT2AC_distributed.py]. This step needs to be done as many times as there are GALS Models.
-In this script the user as to introduce the I2C addresses of the arduino boards.
+In this script the user as to introduce the I2C addresses of the Arduino boards.
 ```sh
 Inputs
 Digital 2 -> net1
@@ -120,7 +120,7 @@ Setup the Arduino board and the breadboard with the required components as the n
 ####### Step4 - Distributed Controller
 ![Distributed Controller Design](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/i2c_comm_prototype/distributed_controller/distributed_controller_design.png)
 
-The user can see the models beaviour with the Serial Monitor at 9600 bitrate.
+The user can see the models behaviour with the Serial Monitor at 9600 bitrate.
 
 For any questions with the preparation and setup please contact arturjataide@gmail.com.
 
@@ -129,7 +129,7 @@ License
 ???
 
    [user manual]: <http://gres.uninova.pt/iopt_usermanual.pdf>
-   [IOPT Tools]: <http://gres.uninova.pt/IOPT-tools/>
+   [IOPT-Tools]: <http://gres.uninova.pt/IOPT-tools/>
    [models folder]: <https://github.com/arturataide/IOPT2AC/tree/master/models>
    [here]:<https://github.com/arturataide/IOPT2AC/blob/master/code/single_controller/single_controller.zip>
    [this folder]: https://github.com/arturataide/IOPT2AC/tree/master/code/distributed_controller>
