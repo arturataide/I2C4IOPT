@@ -52,7 +52,7 @@ $ rm MakeFile http_server.* dummy_gpio.c linux_sys_gpio.c raspi_mmap_gpio.c net_
 ##### Step2
 Rename the `net_main.c` file to its parent folder name and change its extension to `.ino`.
  ```sh
- $  mv net_main.c single_controller.ino
+ $ mv net_main.c single_controller.ino
  ```
 
 
