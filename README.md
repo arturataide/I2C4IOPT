@@ -131,15 +131,15 @@ Future Improvements
 * Include this script in IOPT-Tools framework.
 
 ##### References
-[1] F. Pereira and L. Gomes, “Cloud based IOPT Petri net simulator to test and debug embedded system controllers,” in Technological Innovation for Cloud-Based Engineering Systems, ser. IFIP Advances in Informa- tion and Communication Technology, L. M. Camarinha-Matos, T. A. Baldissera, G. Di Orio, and F. Marques, Eds. Springer International Publishing, 2015, vol. 450, pp. 165–175.
+1. F. Pereira and L. Gomes, “Cloud based IOPT Petri net simulator to test and debug embedded system controllers,” in Technological Innovation for Cloud-Based Engineering Systems, ser. IFIP Advances in Informa- tion and Communication Technology, L. M. Camarinha-Matos, T. A. Baldissera, G. Di Orio, and F. Marques, Eds. Springer International Publishing, 2015, vol. 450, pp. 165–175.
 
-[2] F. Pereira, F. Moutinho, and L. Gomes, “Model-checking framework for embedded systems controllers development using iopt petri nets,” in 2012 IEEE International Symposium on Industrial Electronics, May 2012, pp. 1399–1404.
+2. F. Pereira, F. Moutinho, and L. Gomes, “Model-checking framework for embedded systems controllers development using iopt petri nets,” in 2012 IEEE International Symposium on Industrial Electronics, May 2012, pp. 1399–1404.
 
-[3] A. Costa and L. Gomes, “Partitioning of petri net models amenable for distributed execution,” in 2006 IEEE Conference on Emerging Technologies and Factory Automation, Sept 2006, pp. 1129–1132.
+3. A. Costa and L. Gomes, “Partitioning of petri net models amenable for distributed execution,” in 2006 IEEE Conference on Emerging Technologies and Factory Automation, Sept 2006, pp. 1129–1132.
 
-[4] F. Moutinho and L. Gomes, “Asynchronous-channels within Petri net- based gals distributed embedded systems modeling,” Industrial Informat- ics, IEEE Transactions on, vol. 10, no. 4, pp. 2024–2033, Nov 2014.
+4. F. Moutinho and L. Gomes, “Asynchronous-channels within Petri net- based gals distributed embedded systems modeling,” Industrial Informat- ics, IEEE Transactions on, vol. 10, no. 4, pp. 2024–2033, Nov 2014.
 
-[5] ——, Distributed Embedded Controller Development with Petri Nets: Application to Globally-Asynchronous Locally-Synchronous Systems, 1st ed. Springer Publishing Company, Incorporated, 2015.
+5. ——, Distributed Embedded Controller Development with Petri Nets: Application to Globally-Asynchronous Locally-Synchronous Systems, 1st ed. Springer Publishing Company, Incorporated, 2015.
 
    [user manual]: <http://gres.uninova.pt/iopt_usermanual.pdf>
    [IOPT-Tools]: <http://gres.uninova.pt/IOPT-tools/>
