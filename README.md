@@ -18,7 +18,7 @@ Prototype of a toolkit to generate executable code for distributed embedded cont
 
 ### IOPT-Tools
 
-The [IOPT-Tools] framework allows the interactive creation of graphical models using IOPT nets. The user creates the Petri net graph and associates external signals and events to its transitions and places. Each event is defined based on the change of a signal value (edge up or edge down). The models can be interactively simulated [11] and its state space generated and verified to detect deadlocks, determine needed memory resources, and identify the occurrence of desirable global states [12]. The nodes can have distinct associated time domains. These models can be automatically split in the corresponding single time domain models from which code is then generated to be run in distinct processors [13], [14], [15]. In this prototype it is possible to run those nets on Arduino boards.
+The [IOPT-Tools] framework allows the interactive creation of graphical models using IOPT nets. The user creates the Petri net graph and associates external signals and events to its transitions and places. Each event is defined based on the change of a signal value (edge up or edge down). The models can be interactively simulated [1] and its state space generated and verified to detect deadlocks, determine needed memory resources, and identify the occurrence of desirable global states [2]. The nodes can have distinct associated time domains. These models can be automatically split in the corresponding single time domain models from which code is then generated to be run in distinct processors [3], [4], [5]. In this prototype it is possible to run those nets on Arduino boards.
 
 For more information on how to use IOPT-Tools framework please read it's [user manual].
 
@@ -130,11 +130,12 @@ Future Improvements
 * Automate delete and rename files operations.
 * Include this script in IOPT-Tools framework.
 
-###### References
-<sub><sup>
-* Ref 1
-* Ref 2
-</sup></sub>
+##### References
+[1] F. Pereira and L. Gomes, “Cloud based IOPT Petri net simulator to test and debug embedded system controllers,” in Technological Innovation for Cloud-Based Engineering Systems, ser. IFIP Advances in Informa- tion and Communication Technology, L. M. Camarinha-Matos, T. A. Baldissera, G. Di Orio, and F. Marques, Eds. Springer International Publishing, 2015, vol. 450, pp. 165–175.
+[2] F. Pereira, F. Moutinho, and L. Gomes, “Model-checking framework for embedded systems controllers development using iopt petri nets,” in 2012 IEEE International Symposium on Industrial Electronics, May 2012, pp. 1399–1404.
+[3] A. Costa and L. Gomes, “Partitioning of petri net models amenable for distributed execution,” in 2006 IEEE Conference on Emerging Technologies and Factory Automation, Sept 2006, pp. 1129–1132.
+[4] F. Moutinho and L. Gomes, “Asynchronous-channels within Petri net- based gals distributed embedded systems modeling,” Industrial Informat- ics, IEEE Transactions on, vol. 10, no. 4, pp. 2024–2033, Nov 2014.
+[5] ——, Distributed Embedded Controller Development with Petri Nets: Application to Globally-Asynchronous Locally-Synchronous Systems, 1st ed. Springer Publishing Company, Incorporated, 2015.
 
    [user manual]: <http://gres.uninova.pt/iopt_usermanual.pdf>
    [IOPT-Tools]: <http://gres.uninova.pt/IOPT-tools/>
