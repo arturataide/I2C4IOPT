@@ -104,7 +104,7 @@ Enter the address of event19 device: 2
 Addresses
 [{'event': 'event19', 'address': '2'}]
 ```
-![Workflow](https://dl.dropboxusercontent.com/u/66156156/i2c%20paper/workflow.jpg)
+![Workflow](https://dl.dropboxusercontent.com/u/66156156/i2c%20paper/workflow.png)
 
 ***NOTE:*** The IOPT2AC script has two versions, one for the single controller example and another to the distributed controllers example. Please run the one that applies to you model scenario.
 
