@@ -130,6 +130,12 @@ Future Improvements
 * Automate delete and rename files operations.
 * Include this script in IOPT-Tools framework.
 
+###### References
+<sub><sup>
+* Ref 1
+* Ref 2
+</sup></sub>
+
    [user manual]: <http://gres.uninova.pt/iopt_usermanual.pdf>
    [IOPT-Tools]: <http://gres.uninova.pt/IOPT-tools/>
    [models folder]: <https://github.com/arturataide/IOPT2AC/tree/master/models>
