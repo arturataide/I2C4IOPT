@@ -55,7 +55,9 @@ Rename the `net_main.c` file to its parent folder name and change its extension 
  $  mv net_main.c single_controller.ino
  ```
 
- ##### Step3
+
+##### Step3
+
  Run the IOPT2AC script passing the input (`-i`) file and output (`-o`) file arguments.
  The input file must be the `net_io.c` file and the output file must have `.cpp` extension in other to fully support `Wire.h` [library]. After running the script please remove the `net_io.c` file.
  ```sh
@@ -63,7 +65,7 @@ Rename the `net_main.c` file to its parent folder name and change its extension 
  $ rm net_io.c
  ```
 
- ##### Step3 - Single Controller
+###### Step3 - Single Controller
  In the single controller scenario the script used is the [IOPT2AC_single.py]. When the script finishes to run it outputs where the arduino's Digital Ports should be connected.
  ```sh
  Inputs
@@ -82,10 +84,10 @@ Output Events:
 0
  ```
 
- ##### Step3 - Distributed Controllers
- In the single controller scenario the script used is the [IOPT2AC_distributed.py]. This step needs to be done as many times as there are GALS Models.
- In this script the user as to introduce the I2C addresses of the arduino boards.
- ```sh
+###### Step3 - Distributed Controllers
+In the single controller scenario the script used is the [IOPT2AC_distributed.py]. This step needs to be done as many times as there are GALS Models.
+In this script the user as to introduce the I2C addresses of the arduino boards.
+```sh
 Inputs
 Digital 2 -> net1
 Digital 3 -> net2
@@ -108,15 +110,15 @@ Addresses
 
 ***NOTE:*** The IOPT2AC script has two versions, one for the single controller example and another to the distributed controllers example. Please run the one that applies to you model scenario.
 
- ##### Step4
- ***Note:*** You can skip the previous steps and compile the already [prepared code] with [Arduino IDE]
+##### Step4
+***Note:*** You can skip the previous steps and compile the already [prepared code] with [Arduino IDE]
 
- Setup the Arduino board and the breadboard with the required components as the next figures show:
+Setup the Arduino board and the breadboard with the required components as the next figures show:
 
- ##### Step4 - Single Controller
- ![Single Controller Design](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/i2c_comm_prototype/single_controller/single_controller_design.png)
- ##### Step4 - Distributed Controller
- ![Distributed Controller Design](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/i2c_comm_prototype/distributed_controller/distributed_controller_design.png)
+###### Step4 - Single Controller
+![Single Controller Design](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/i2c_comm_prototype/single_controller/single_controller_design.png)
+####### Step4 - Distributed Controller
+![Distributed Controller Design](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/i2c_comm_prototype/distributed_controller/distributed_controller_design.png)
 
 The user can see the models beaviour with the Serial Monitor at 9600 bitrate.
 
