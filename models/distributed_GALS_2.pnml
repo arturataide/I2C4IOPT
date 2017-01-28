@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Snoopy revision="0" version="0">
+  <pnml>
+    <net id="1" name="simples_without_net" type="IOPT">
+      <input>
+        <signal id="net1" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="220" y="90"/>
+          </graphics>
+        </signal>
+        <signal id="net2" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="280" y="90"/>
+          </graphics>
+        </signal>
+        <event id="net1E" edge="up" level="0" signal="net1">
+          <graphics>
+            <position page="1" x="340" y="90"/>
+          </graphics>
+        </event>
+        <event id="net2E" edge="up" level="0" signal="net2">
+          <graphics>
+            <position page="1" x="440" y="90"/>
+          </graphics>
+        </event>
+        <event id="event19" autonomous="true">
+          <graphics>
+            <position page="1" x="140" y="160"/>
+          </graphics>
+        </event>
+      </input>
+      <output>
+        <signal id="led1" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="100" y="90"/>
+          </graphics>
+        </signal>
+        <signal id="led2" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="160" y="90"/>
+          </graphics>
+        </signal>
+        <event id="event20" autonomous="true">
+          <graphics>
+            <position page="1" x="140" y="160"/>
+          </graphics>
+        </event>
+      </output>
+      <variable/>
+      <place id="3">
+        <name>
+          <text>Place2</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="420" y="210"/>
+        </graphics>
+        <timedomain>
+          <text>2</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <signalOutputActions>
+          <signalOutputAction idRef="led2" value="1">
+            <concreteSyntax language="C">
+              <text>p_3 == 1</text>
+            </concreteSyntax>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="8">
+        <name>
+          <text>tr_8</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="C">
+              <text> 1 </text>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents>
+          <event idRef="net2E"/>
+        </inputEvents>
+        <graphics>
+          <position page="1" x="370" y="140"/>
+        </graphics>
+        <timedomain>
+          <text>2</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <outputEvents>
+          <event idRef="event20"/>
+        </outputEvents>
+      </transition>
+      <transition id="10">
+        <name>
+          <text>tr_10</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents>
+          <event idRef="event19"/>
+        </inputEvents>
+        <graphics>
+          <position page="1" x="370" y="280"/>
+        </graphics>
+        <timedomain>
+          <text>2</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <outputEvents/>
+      </transition>
+      <arc id="15" source="10" target="3">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="395" y="245"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="16" source="3" target="8">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="395" y="175"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="11"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+    </net>
+  </pnml>
+</Snoopy>

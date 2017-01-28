@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Snoopy revision="0" version="0">
+  <pnml>
+    <net id="1" name="simples_without_net" type="IOPT">
+      <input>
+        <signal id="net1" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="190" y="60"/>
+          </graphics>
+        </signal>
+        <signal id="net2" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="250" y="60"/>
+          </graphics>
+        </signal>
+        <event id="net1E" edge="up" level="0" signal="net1">
+          <graphics>
+            <position page="1" x="310" y="60"/>
+          </graphics>
+        </event>
+        <event id="net2E" edge="up" level="0" signal="net2">
+          <graphics>
+            <position page="1" x="410" y="60"/>
+          </graphics>
+        </event>
+      </input>
+      <output>
+        <signal id="led1" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="70" y="60"/>
+          </graphics>
+        </signal>
+        <signal id="led2" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="130" y="60"/>
+          </graphics>
+        </signal>
+      </output>
+      <variable/>
+      <place id="2">
+        <name>
+          <text>Place1</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="137" y="177"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="led1" value="p_2 == 1">
+            <concreteSyntax language="C">
+              <text/>
+            </concreteSyntax>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <place id="3">
+        <name>
+          <text>Place2</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="407" y="177"/>
+        </graphics>
+        <signalOutputActions>
+          <signalOutputAction idRef="led2" value="p_3 == 1">
+            <concreteSyntax language="C">
+              <text/>
+            </concreteSyntax>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <place id="4">
+        <name>
+          <text>Place_Cloud2</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="277" y="107"/>
+        </graphics>
+      </place>
+      <place id="5">
+        <name>
+          <text>Place_Cloud1</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="277" y="247"/>
+        </graphics>
+      </place>
+      <transition id="6">
+        <name>
+          <text>tr_6</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents>
+          <event idRef="net1E"/>
+        </inputEvents>
+        <graphics>
+          <position page="1" x="197" y="247"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <transition id="7">
+        <name>
+          <text>tr_7</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="357" y="247"/>
+        </graphics>
+      </transition>
+      <transition id="8">
+        <name>
+          <text>tr_8</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents>
+          <event idRef="net2E"/>
+        </inputEvents>
+        <graphics>
+          <position page="1" x="357" y="107"/>
+        </graphics>
+        <outputEvents/>
+      </transition>
+      <transition id="9">
+        <name>
+          <text>tr_9</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="197" y="107"/>
+        </graphics>
+      </transition>
+      <arc id="10" source="2" target="6">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="167" y="212"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="11" source="6" target="5">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="237" y="247"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="12" source="5" target="7">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="317" y="247"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="13" source="7" target="3">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="382" y="212"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="14" source="3" target="8">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="382" y="142"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="12"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="15" source="8" target="4">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="317" y="107"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="16" source="4" target="9">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="237" y="107"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="17" source="9" target="2">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="167" y="142"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="11"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+    </net>
+  </pnml>
+</Snoopy>

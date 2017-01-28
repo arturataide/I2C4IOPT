@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Snoopy revision="0" version="0">
+  <pnml>
+    <net id="1" name="simples_without_net" type="IOPT">
+      <input>
+        <signal id="net1" type="boolean" value="0" gpio_nr="0" min="0" max="1">
+          <graphics>
+            <position page="1" x="220" y="90"/>
+          </graphics>
+        </signal>
+        <signal id="net2" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="280" y="90"/>
+          </graphics>
+        </signal>
+        <event id="net1E" edge="up" level="0" signal="net1">
+          <graphics>
+            <position page="1" x="340" y="90"/>
+          </graphics>
+        </event>
+        <event id="net2E" edge="up" level="0" signal="net2">
+          <graphics>
+            <position page="1" x="440" y="90"/>
+          </graphics>
+        </event>
+      </input>
+      <output>
+        <signal id="led1" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="100" y="90"/>
+          </graphics>
+        </signal>
+        <signal id="led2" type="boolean" value="0" gpio_nr="0">
+          <graphics>
+            <position page="1" x="160" y="90"/>
+          </graphics>
+        </signal>
+      </output>
+      <variable/>
+      <place id="2">
+        <name>
+          <text>Place1</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>1</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="150" y="210"/>
+        </graphics>
+        <timedomain>
+          <text>1</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <signalOutputActions>
+          <signalOutputAction idRef="led1" value="1">
+            <concreteSyntax language="C">
+              <text>p_2 == 1</text>
+            </concreteSyntax>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <place id="3">
+        <name>
+          <text>Place2</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <initialMarking>
+          <text>0</text>
+          <graphics>
+            <offset x="0" y="-1"/>
+          </graphics>
+        </initialMarking>
+        <bound>
+          <text>3</text>
+        </bound>
+        <graphics>
+          <position page="1" x="420" y="210"/>
+        </graphics>
+        <timedomain>
+          <text>2</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <signalOutputActions>
+          <signalOutputAction idRef="led2" value="1">
+            <concreteSyntax language="C">
+              <text>p_3 == 1</text>
+            </concreteSyntax>
+          </signalOutputAction>
+        </signalOutputActions>
+      </place>
+      <transition id="7">
+        <name>
+          <text>tr_7</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="200" y="140"/>
+        </graphics>
+        <timedomain>
+          <text>1</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <outputEvents/>
+      </transition>
+      <transition id="8">
+        <name>
+          <text>tr_8</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="C">
+              <text> 1 </text>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents>
+          <event idRef="net2E"/>
+        </inputEvents>
+        <graphics>
+          <position page="1" x="370" y="140"/>
+        </graphics>
+        <timedomain>
+          <text>2</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <outputEvents/>
+      </transition>
+      <transition id="9">
+        <name>
+          <text>tr_9</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards>
+          <signalinputguard>
+            <concreteSyntax language="C">
+              <text> 1 </text>
+            </concreteSyntax>
+          </signalinputguard>
+        </signalInputGuards>
+        <inputEvents>
+          <event idRef="net1E"/>
+        </inputEvents>
+        <graphics>
+          <position page="1" x="200" y="280"/>
+        </graphics>
+        <timedomain>
+          <text>1</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <outputEvents/>
+        <signalOutputActions>
+          
+        </signalOutputActions>
+      </transition>
+      <transition id="10">
+        <name>
+          <text>tr_10</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <priority>1</priority>
+        <signalInputGuards/>
+        <inputEvents/>
+        <graphics>
+          <position page="1" x="370" y="280"/>
+        </graphics>
+        <timedomain>
+          <text>2</text>
+          <graphics>
+            <offset x="20" y="0"/>
+          </graphics>
+        </timedomain>
+        <outputEvents/>
+      </transition>
+      <arc id="11" source="7" target="2">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="175" y="175"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="12"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="12" source="2" target="9">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="175" y="245"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="7" y="-2"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="15" source="10" target="3">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="395" y="245"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="-1"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="16" source="3" target="8">
+        <type>normal</type>
+        <graphics>
+          <position page="1" x="395" y="175"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="-7" y="11"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <place id="19">
+        <name>
+          <text>Cloud1</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <placetype>asyncchannel</placetype>
+        <actype>simple</actype>
+        <graphics>
+          <position page="1" x="290" y="280"/>
+        </graphics>
+      </place>
+      <place id="20">
+        <name>
+          <text>Cloud2</text>
+          <graphics>
+            <offset x="-10" y="20"/>
+          </graphics>
+        </name>
+        <comment>
+          <text/>
+          <graphics>
+            <offset x="-30" y="20"/>
+          </graphics>
+        </comment>
+        <placetype>asyncchannel</placetype>
+        <actype>simple</actype>
+        <graphics>
+          <position page="1" x="290" y="140"/>
+        </graphics>
+      </place>
+      <arc id="21" source="9" target="19">
+        <type>channel</type>
+        <graphics>
+          <position page="1" x="245" y="280"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="22" source="19" target="10">
+        <type>channel</type>
+        <graphics>
+          <position page="1" x="330" y="280"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="-5"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="23" source="8" target="20">
+        <type>channel</type>
+        <graphics>
+          <position page="1" x="330" y="140"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+      <arc id="24" source="20" target="7">
+        <type>channel</type>
+        <graphics>
+          <position page="1" x="245" y="140"/>
+        </graphics>
+        <inscription>
+          <graphics>
+            <offset page="1" x="0" y="15"/>
+          </graphics>
+          <value>1</value>
+        </inscription>
+      </arc>
+    </net>
+  </pnml>
+</Snoopy>
