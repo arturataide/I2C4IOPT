@@ -124,9 +124,11 @@ The user can see the models behaviour with the Serial Monitor at 9600 bitrate.
 
 For any questions with the preparation and setup please contact arturjataide@gmail.com.
 
-License
+Future Improvements
 ----
-???
+* Arduino Mega Digital Ports auto generated.
+* Automate delete and rename files operations.
+* Include this script in IOPT-Tools framework.
 
    [user manual]: <http://gres.uninova.pt/iopt_usermanual.pdf>
    [IOPT-Tools]: <http://gres.uninova.pt/IOPT-tools/>
