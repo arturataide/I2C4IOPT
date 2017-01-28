@@ -63,7 +63,7 @@ Rename the `net_main.c` file to its parent folder name and change its extension 
  $ rm net_io.c
  ```
 
- ###### Step3 - Single Controller
+ ##### Step3 - Single Controller
  In the single controller scenario the script used is the [IOPT2AC_single.py]. When the script finishes to run it outputs where the arduino's Digital Ports should be connected.
  ```sh
  Inputs
@@ -82,7 +82,7 @@ Output Events:
 0
  ```
 
- ###### Step3 - Distributed Controllers
+ ##### Step3 - Distributed Controllers
  In the single controller scenario the script used is the [IOPT2AC_distributed.py]. This step needs to be done as many times as there are GALS Models.
  In this script the user as to introduce the I2C addresses of the arduino boards.
  ```sh
@@ -113,9 +113,9 @@ Addresses
 
  Setup the Arduino board and the breadboard with the required components as the next figures show:
 
- ###### Single Controller
+ ##### Step4 - Single Controller
  ![Single Controller Design](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/i2c_comm_prototype/single_controller/single_controller_design.png)
- ###### Distributed Controller
+ ##### Step4 - Distributed Controller
  ![Distributed Controller Design](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/i2c_comm_prototype/distributed_controller/distributed_controller_design.png)
 
 The user can see the models beaviour with the Serial Monitor at 9600 bitrate.
