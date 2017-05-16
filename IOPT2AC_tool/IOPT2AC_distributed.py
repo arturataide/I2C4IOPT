@@ -5,12 +5,14 @@ import sys, getopt, re
 
 class AddSerialToCode:
 
-    def __init__(self, input_file, output_file):
+    def __init__(self, input_file, output_file, address, models):
         '''
             Initialize AddSerialToCode object
             @param input_file file to be read
             @param output_file file to write the new code
         '''
+        super(AddSerialToCode,self).__init__()
+        print("AddSerialToCode")
 
         self.input_file    = input_file
         self.output_file   = output_file
@@ -18,19 +20,22 @@ class AddSerialToCode:
         self.input_events  = []
         self.output_events = []
         self.outputs       = []
-        # TODO missing inputs
         self.DIGITAL_PORTS = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
         self.TAB           = "    "
-        self.this_address  = ""
         self.addresses     = []
         self.strings = {}
+        self.this_address = address
+        self.models = models
 
     def write(self):
         '''
             Write the SoftwareSerial communication code to the output file
         '''
-
+        print(self.input_file)
+        print(self.output_file)
         try:
+            print(self.input_file)
+            print(self.output_file)
             # open input file to read and output file to append
             f_read  = open(self.input_file, 'r')
             f_write = open(self.output_file, 'w')
@@ -175,15 +180,17 @@ class AddSerialToCode:
 
     def ask_for_addresses(self):
         # This device address
-        device = raw_input("Enter this device address: ")
-        self.this_address = device
         for k in self.output_events:
-            address = raw_input("Enter the address of " + k + " device: ")
-            self.addresses.append(
-                {
-                    'address': address,
-                    'event'  : k
-                })
+            for model in self.models:
+                for e in model['events']:
+                    if e == k:
+                        self.addresses.append(
+                            {
+                                'address': model['address'],
+                                'event'  : k
+                            })
+            #address = raw_input("Enter the address of " + k + " device: ")
+
         print 'Addresses'
         print self.addresses
 
@@ -226,31 +233,10 @@ class AddSerialToCode:
 
         self.model_name = re.findall(r'.starts: \*/\nvoid (.*)_InitializeIO().*', file_content, re.S)[0][0]
 
-
-if __name__ == "__main__":
-    '''
-        Get args from console
-        @param -i input file
-        @param -o output file
-        @param -h show help text
-    '''
-
-    inputfile = ''
-    outputfile = ''
-    try:
-        opts, args = getopt.getopt(sys.argv[1:],"hi:o:",["ifile=","ofile="])
-    except getopt.GetoptError:
-        print 'write_file.py -i <inputfile> -o <outputfile>'
-        sys.exit(2)
-    for opt, arg in opts:
-        if opt == '-h':
-            print 'test.py -i <inputfile> -o <outputfile>'
-            sys.exit()
-        elif opt in ("-i", "--ifile"):
-            inputfile = arg
-        elif opt in ("-o", "--ofile"):
-            outputfile = arg
-
-    # Create object to add SoftwareSerial code and communication
-    addSerialToCode = AddSerialToCode(inputfile, outputfile)
-    addSerialToCode.write()
+    @staticmethod
+    def get_all_outputs(_file):
+        f_read = open(_file, 'r')
+        output_events_string = re.findall(r'.OutputSignalEvents(.*)LoopDelay().*', f_read.read(), re.S)
+        outputs = re.findall(r'events->(.*) \*\/', output_events_string[0][0])
+        f_read.close()
+        return outputs
