@@ -6,8 +6,12 @@ Prototype of a toolkit to generate executable code for distributed embedded cont
 ---
 
 ### Requirements
+#### OSX Tool version
 * Python 2.7 (with PyObjC, os, os.path and re libs)
 * OSX machine
+#### All platforms version
+* Python 3.6 (with os, os.path, re nad tkinter libs)
+#### Arduino Requirements
 * 3 Arduino Boads
 * 1 BreadBoard
 * 8 LED's
