@@ -36,7 +36,10 @@ When the user has the model opened, the C language code can be generated with a 
 ![Generate C Code](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/generatecode.jpg)
 
 The above image representsthe example for a single controller model, and the code generated is available [here].
-<img src="https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/single_controller.png" width="250">
+<br>
+<p align="center">
+   <img src="https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/single_controller.png" width="400">
+</p>
 
 For the N-time domain models an additional step needs to be completed. The user must generate the GALS Models (Globally-Asynchronous Locally-Synchronous) first with the "Decompose GALS" button. The framework will automatically generate N new models as the N is equal to the time domains present in the model.
 With two time domains (proof of concept example) it will generate two models as seen in the following figure.
