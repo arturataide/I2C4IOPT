@@ -35,7 +35,8 @@ When the user has the model opened, the C language code can be generated with a 
 
 ![Generate C Code](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/generatecode.jpg)
 
-This is the example for a single controller model, and the code generated is available [here].
+The above image representsthe example for a single controller model, and the code generated is available [here].
+<img src="https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/single_controller.png" width="250">
 
 For the N-time domain models an additional step needs to be completed. The user must generate the GALS Models (Globally-Asynchronous Locally-Synchronous) first with the "Decompose GALS" button. The framework will automatically generate N new models as the N is equal to the time domains present in the model.
 With two time domains (proof of concept example) it will generate two models as seen in the following figure.
@@ -125,7 +126,7 @@ Future Improvements
    [user manual]: <http://gres.uninova.pt/iopt_usermanual.pdf>
    [IOPT-Tools]: <http://gres.uninova.pt/IOPT-tools/>
    [models folder]: <https://github.com/arturataide/IOPT2AC/tree/master/models>
-   [here]:<https://github.com/arturataide/IOPT2AC/blob/master/code/single_controller/single_controller.zip>
+   [here]:<https://github.com/arturataide/IOPT2AC/blob/master/single_controller/cars3_simple.zip>
    [this folder]: <https://github.com/arturataide/IOPT2AC/tree/master/IOPT2AC_tool_all_platforms/zip_files>
    [library]: <https://www.arduino.cc/en/Reference/Wire>
    [IOPT2AC_single.py]: <https://github.com/arturataide/IOPT2AC/blob/master/old/code/single_controller/IOPT2AC_single.py>
