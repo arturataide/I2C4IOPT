@@ -42,7 +42,7 @@ With two time domains (proof of concept example) it will generate two models as 
 
 ![GALS Models](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/split.jpg)
 
-In order to obtain the C code the user has to access every GALS Model ad press the "Generate C Code" button.
+In order to obtain the C code the user has to access every GALS Model and press the "Generate C Code" button.
 This model code is present in [this folder] named as "3cars_async_TD-1.zip", "3cars_async_TD-5.zip" and "3cars_async_TD-6.zip".
 
 #### Prepare the Arduino project
@@ -126,7 +126,7 @@ Future Improvements
    [IOPT-Tools]: <http://gres.uninova.pt/IOPT-tools/>
    [models folder]: <https://github.com/arturataide/IOPT2AC/tree/master/models>
    [here]:<https://github.com/arturataide/IOPT2AC/blob/master/code/single_controller/single_controller.zip>
-   [this folder]: <https://github.com/arturataide/IOPT2AC/tree/master/IOPT2AC_tool/zip_files>
+   [this folder]: <https://github.com/arturataide/IOPT2AC/tree/master/IOPT2AC_tool_all_platforms/zip_files>
    [library]: <https://www.arduino.cc/en/Reference/Wire>
    [IOPT2AC_single.py]: <https://github.com/arturataide/IOPT2AC/blob/master/old/code/single_controller/IOPT2AC_single.py>
    [Arduino IDE]: <https://www.arduino.cc/en/main/software>
