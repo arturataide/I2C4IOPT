@@ -48,6 +48,7 @@ With two time domains (proof of concept example) it will generate two models as 
 
 In order to obtain the C code the user has to access every GALS Model and press the "Generate C Code" button.
 This model code is present in [this folder] named as "3cars_async_TD-1.zip", "3cars_async_TD-5.zip" and "3cars_async_TD-6.zip".
+In this IOPT-Tools account there is also a simplier example with two controllers named "simples_TD-1" and "simples_TD-2".
 
 #### Prepare the Arduino project
 Please follow this steps to prepare the Arduino project:
@@ -134,5 +135,6 @@ Future Improvements
    [library]: <https://www.arduino.cc/en/Reference/Wire>
    [IOPT2AC_single.py]: <https://github.com/arturataide/IOPT2AC/blob/master/old/code/single_controller/IOPT2AC_single.py>
    [Arduino IDE]: <https://www.arduino.cc/en/main/software>
-   [tool]: <https://github.com/arturataide/IOPT2AC/tree/master/IOPT2AC_tool>
+   [tool]: <https://github.com/arturataide/IOPT2AC/tree/master/IOPT2AC_tool_OSX>
+   [tool for all platforms]: <https://github.com/arturataide/IOPT2AC/tree/master/IOPT2AC_tool_all_platforms>
 
