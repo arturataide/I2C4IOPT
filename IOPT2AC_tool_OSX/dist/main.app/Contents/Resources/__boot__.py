@@ -60,7 +60,7 @@ def _path_inject(paths):
     sys.path[:0] = paths
 
 
-_path_inject(['/Users/arturataide/Desktop/git repo/IOPT2AC_tool'])
+_path_inject(['/Users/arturataide/Desktop/IOPT2AC_tool'])
 
 
 import re, sys
@@ -107,7 +107,7 @@ def _run():
     exec(compile(source, script, 'exec'), globals(), globals())
 
 
-DEFAULT_SCRIPT='/Users/arturataide/Desktop/git repo/IOPT2AC_tool/main.py'
+DEFAULT_SCRIPT='/Users/arturataide/Desktop/IOPT2AC_tool/main.py'
 SCRIPT_MAP={}
 try:
     _run()
