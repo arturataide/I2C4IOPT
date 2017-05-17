@@ -75,6 +75,7 @@ Check if the models are detected automatically (see the image below). If not, pl
    <img src="https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/modelsfound.jpg" width="300">
    <img src="https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/modelsfound_all.jpg" width="300">
 </p>
+
 ##### Step4
 If the IOPT2AC_tool detects the correct number of models you are able to click in "Generate Arduino Files". As soon as the processes finishes the tool shows the models processed and their adresses.
 <br><br>
