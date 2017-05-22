@@ -45,12 +45,12 @@ The above image representsthe example for a single controller model, and the cod
 </p>
 
 For the N-time domain models an additional step needs to be completed. The user must generate the GALS Models (Globally-Asynchronous Locally-Synchronous) first with the "Decompose GALS" button. The framework will automatically generate N new models as the N is equal to the time domains present in the model.
-With two time domains (proof of concept example) it will generate two models as seen in the following figure.
+With three time domains (proof of concept example) it will generate three models as seen in the following figure.
 
 ![GALS Models](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/split.jpg)
 
 In order to obtain the C code the user has to access every GALS Model and press the "Generate C Code" button.
-This model code is present in [this folder] named as "3cars_async_TD-1.zip", "3cars_async_TD-5.zip" and "3cars_async_TD-6.zip".
+This model code should be copied into [this folder]. You can pass this code generation step and use the previous generated models present in thr [distributed models folder]
 In this IOPT-Tools account there is also a simplier example with two controllers named "simples_TD-1" and "simples_TD-2".
 
 #### Prepare the Arduino project
@@ -148,4 +148,4 @@ Future Improvements
    [Arduino IDE]: <https://www.arduino.cc/en/main/software>
    [tool]: <https://github.com/arturataide/IOPT2AC/tree/master/IOPT2AC_tool_OSX>
    [tool for all platforms]: <https://github.com/arturataide/IOPT2AC/tree/master/IOPT2AC_tool_all_platforms>
-
+   [distributed models folder]: <https://github.com/arturataide/IOPT2AC/tree/master/distributed_models/3_cars>
