@@ -10,13 +10,13 @@ Prototype of a toolkit to generate executable code for distributed embedded cont
 * Python 2.7 (with PyObjC, os, os.path and re libs)
 * OSX machine
 #### All platforms version
-* Python 3.6 (with os, os.path, re nad tkinter libs)
+* Python 3.6 (with os, os.path, re and tkinter libs)
 #### Arduino Requirements
 * 3 Arduino Boads
 * 1 BreadBoard
-* 8 LED's
+* 8 LED
 * 2 4.7k Ohm Resistors (for I2C)
-* 8 220 Ohm Resistors (for LED's)
+* 8 220 Ohm Resistors (for LEDs)
 * Hook-up wires
 
 ### IOPT-Tools
@@ -26,7 +26,8 @@ The [IOPT-Tools] framework allows the interactive creation of graphical models u
 For more information on how to use IOPT-Tools framework please read it's [user manual].
 
 #### Model Creation
-For this paper a new account was created with the following credentials: user: "etfa2017"; pass: "etfa2017".
+For this paper a new account was created with the following credentials:
+user: <strong>etfa2017</strong>; pass: <strong>etfa2017</strong>.
 
 For proof of concept there were created two models, one with a single time domain (single controller needed) and another with three distinct time domains (three controllers needed).
 
