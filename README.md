@@ -27,11 +27,12 @@ For more information on how to use IOPT-Tools framework please read it's [user m
 
 #### Model Creation
 For this paper a new account was created with the following credentials:
+
 user: <strong>etfa2017</strong>; pass: <strong>etfa2017</strong>.
 
 For proof of concept there were created two models, one with a single time domain (single controller needed) and another with three distinct time domains (three controllers needed).
 
-When the user logs in in IOPT-Tools with the credentials given he will found the four distinct models.
+When the user access IOPT-Tools platform with the credentials given he will found seven distinct models corresponding to two examples. One with three controllers (```3cars\*```) and another with two controller (```simple\*```). Like it was said above, in this paper we use the 3cars model.
 When the user has the model opened, the C language code can be generated with a click in "Generate C Code" button, as seen in the following figure.
 
 ![Generate C Code](https://raw.githubusercontent.com/arturataide/IOPT2AC/master/images/etfa/generatecode.jpg)
