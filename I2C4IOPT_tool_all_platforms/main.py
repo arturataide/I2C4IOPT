@@ -1,7 +1,7 @@
 
 import tkinter
 import tkinter.messagebox
-from IOPT2AC_distributed import AddSerialToCode
+from I2C4IOPT_distributed import AddSerialToCode
 import glob, zipfile, os, os.path, re
 
 class MainView():
@@ -13,7 +13,7 @@ class MainView():
         # window
         # Create the main window widget.
         self.top_level_window = tkinter.Tk()
-        self.top_level_window.title('IOPT2AC Tool')
+        self.top_level_window.title('I2C4IOPT Tool')
         self.top_level_window.grid_rowconfigure(1, weight=1)
         self.top_level_window.grid_columnconfigure(0, weight=1)
 
